@@ -1,0 +1,29 @@
+{
+  "name": "naver-ordering-page",
+  "version": "1.0.0",
+  "description": "clone coding ordering page of naver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeo99/naver-ordering-page.git"
+  },
+  "keywords": [
+    "clone",
+    "coding"
+  ],
+  "author": "timek70",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeo99/naver-ordering-page/issues"
+  },
+  "homepage": "https://github.com/yeo99/naver-ordering-page#readme",
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "sass": "^1.45.0",
+    "uglify-js": "^3.14.5",
+    "webpack": "^5.65.0"
+  }
+}
