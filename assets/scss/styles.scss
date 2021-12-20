@@ -1,0 +1,17 @@
+// abstracts, base, components, pages 등 여러 스타일 시트들을 작성해놓고
+// 최종적으로는 styles.scss에서 import하여 ../css/styles.css로 컴파일한다.
+// 특정 파일에 import되어야 하는경우 앞에 _를 적어준다.
+// 그래서 @import할때 파일 명에 _를 적지 않아도 된다.
+@import "./abstracts/variables_color";
+@import "./abstracts/variables";
+// import는 작성한 순서대로 동작하는데, reset, preset은 variables*에서 선언된
+// 색상을 사용한다. 이러한 이유로 variable이 더 나중에 import되면 오류가 발생한다.
+
+@import "./base/reset";
+@import "./base/preset";
+
+@import "./components/header_area";
+@import "./components/order_info_area";
+@import "./components/order_type";
+
+@import "./pages/order_page";
