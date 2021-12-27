@@ -9,9 +9,10 @@
 
 @import "./base/reset";
 @import "./base/preset";
+@import "./components/order_type";   //새 스타일을 만들었다면 styles.scss에서 import
 
-@import "./components/header_area";
-@import "./components/order_info_area";
-@import "./components/order_type";
+// @import "./components/header_area";
+// @import "./components/order_info_area";
+// @import "./components/order_type";
 
-@import "./pages/order_page";
+// @import "./pages/order_page";

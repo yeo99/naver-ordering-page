@@ -1,0 +1,67 @@
+// 메뉴 페이지의 일종이라는 생각이 들어 컴포넌트 폴더에 추가함.
+.dimmed-layer{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;   // 모든 값에 0을 주게되면 화면에 꽉 차게됨.
+    background-color: rgba(#000, 0.8);  // 알파값 조정(투명도)
+    z-index:9999;
+}
+
+.order-type-popup{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:32px 0 40px; // 위, 양쪽 아래 여백.
+    border-radius: 16px 16px 0 0;   //좌상단, 우상단, 우하단, 좌하단 순
+    background-color: white;    //매장or포장 선택 팝업
+    text-align: center;
+    z-index:10000;
+
+    .title{
+        font-size:20px;
+        font-weight: 700;
+        color: $booking-color-text1;
+    }
+
+    .type-list{
+        display: flex;   //옆으로 붙음
+        // 왠만하면 8,4,2의 배수로 값이 넘어옴
+        margin-top: 32px;
+    }
+
+    .type-item {
+        flex: 1;    // 부모 요소에서 flex를 줬을 때, 1:1로 자리를 잡아줌.
+        // 자식 요소개 n개면 각 n개가 균등하게 배치됨.
+        & + .type-item{ //type-item 옆에 또 type-item이 오는 경우에는
+           border-left:1px solid $booking-color-border103;  //세로 경계선
+        }
+    }
+
+    .icon{  //매장or포장 선택하는 아이콘.
+        width:100px;
+        height:auto;    //width값에 맞춰서 비율 조정.
+        color: $booking-color-bg118;  //red값 주면 테두리가 붉게 변함. 이미지를 코드로 수정 가능. 코드 자체의 SVG의 장점.
+    }
+
+    .desc {
+        margin-top:8px;
+        font-size:15px;
+        line-height:1.5;    //단위가 적혀져 있지 않은 line-height는 폰트단위의 n배
+        font-weight: 600;
+        color:$booking-color-text103;
+    }
+
+    .btn-selection {
+        display:inline-block;   //인라인 요소여서 마진값이 안먹힘. 인라인 블럭으로 display값 수정
+        margin-top: 10px;
+        padding: 6px 18px;
+        font-size: 16px;
+        font-weight:700;
+        background-color: $booking-color-bg189;
+        color: #fff;
+        border-radius: 28px;
+    }
+}
