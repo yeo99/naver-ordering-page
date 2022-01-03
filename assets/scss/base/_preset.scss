@@ -12,11 +12,11 @@
 .scroll-x { // 자주 사용되는 기능은 아예 클래스명으로. 가로 스크롤 생성하는 css
     overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
+    white-space: nowrap;    // 띄어쓰기 안함.
+    -webkit-overflow-scrolling: touch;  // 모바일에서 터치로 스크롤링할때, 가속도 효과라던가..?
+    -ms-overflow-style: none;   // IE에서 스크롤바 제거
+    scrollbar-width: none;  // FF에서 스크롤바 제거
+    &::-webkit-scrollbar {  // 크롬에서 스크롤바 제거
         display:none;
     }
 }

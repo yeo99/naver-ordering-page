@@ -1,11 +1,11 @@
-// ¸Ş´º ÆäÀÌÁöÀÇ ÀÏÁ¾ÀÌ¶ó´Â »ı°¢ÀÌ µé¾î ÄÄÆ÷³ÍÆ® Æú´õ¿¡ Ãß°¡ÇÔ.
+// ë©”ë‰´ í˜ì´ì§€ì˜ ì¼ì¢…ì´ë¼ëŠ” ìƒê°ì´ ë“¤ì–´ ì»´í¬ë„ŒíŠ¸ í´ë”ì— ì¶”ê°€í•¨.
 .dimmed-layer{
     position:fixed;
     top:0;
     right:0;
     left:0;
-    bottom:0;   // ¸ğµç °ª¿¡ 0À» ÁÖ°ÔµÇ¸é È­¸é¿¡ ²Ë Â÷°ÔµÊ.
-    background-color: rgba(#000, 0.8);  // ¾ËÆÄ°ª Á¶Á¤(Åõ¸íµµ)
+    bottom:0;   // ëª¨ë“  ê°’ì— 0ì„ ì£¼ê²Œë˜ë©´ í™”ë©´ì— ê½‰ ì°¨ê²Œë¨.
+    background-color: rgba(#000, 0.8);  // ì•ŒíŒŒê°’ ì¡°ì •(íˆ¬ëª…ë„)
     z-index:9999;
 }
 
@@ -14,9 +14,9 @@
     bottom:0;
     left:0;
     right:0;
-    padding:32px 0 40px; // À§, ¾çÂÊ ¾Æ·¡ ¿©¹é.
-    border-radius: 16px 16px 0 0;   //ÁÂ»ó´Ü, ¿ì»ó´Ü, ¿ìÇÏ´Ü, ÁÂÇÏ´Ü ¼ø
-    background-color: white;    //¸ÅÀåorÆ÷Àå ¼±ÅÃ ÆË¾÷
+    padding:32px 0 40px; // ìœ„, ì–‘ìª½ ì•„ë˜ ì—¬ë°±.
+    border-radius: 16px 16px 0 0;   //ì¢Œìƒë‹¨, ìš°ìƒë‹¨, ìš°í•˜ë‹¨, ì¢Œí•˜ë‹¨ ìˆœ
+    background-color: white;    //ë§¤ì¥orí¬ì¥ ì„ íƒ íŒì—…
     text-align: center;
     z-index:10000;
 
@@ -27,35 +27,35 @@
     }
 
     .type-list{
-        display: flex;   //¿·À¸·Î ºÙÀ½
-        // ¿Ø¸¸ÇÏ¸é 8,4,2ÀÇ ¹è¼ö·Î °ªÀÌ ³Ñ¾î¿È
+        display: flex;   //ì˜†ìœ¼ë¡œ ë¶™ìŒ
+        // ì™ ë§Œí•˜ë©´ 8,4,2ì˜ ë°°ìˆ˜ë¡œ ê°’ì´ ë„˜ì–´ì˜´
         margin-top: 32px;
     }
 
     .type-item {
-        flex: 1;    // ºÎ¸ğ ¿ä¼Ò¿¡¼­ flex¸¦ ÁáÀ» ¶§, 1:1·Î ÀÚ¸®¸¦ Àâ¾ÆÁÜ.
-        // ÀÚ½Ä ¿ä¼Ò°³ n°³¸é °¢ n°³°¡ ±ÕµîÇÏ°Ô ¹èÄ¡µÊ.
-        & + .type-item{ //type-item ¿·¿¡ ¶Ç type-itemÀÌ ¿À´Â °æ¿ì¿¡´Â
-           border-left:1px solid $booking-color-border103;  //¼¼·Î °æ°è¼±
+        flex: 1;    // ë¶€ëª¨ ìš”ì†Œì—ì„œ flexë¥¼ ì¤¬ì„ ë•Œ, 1:1ë¡œ ìë¦¬ë¥¼ ì¡ì•„ì¤Œ.
+        // ìì‹ ìš”ì†Œê°œ nê°œë©´ ê° nê°œê°€ ê· ë“±í•˜ê²Œ ë°°ì¹˜ë¨.
+        & + .type-item{ //type-item ì˜†ì— ë˜ type-itemì´ ì˜¤ëŠ” ê²½ìš°ì—ëŠ”
+           border-left:1px solid $booking-color-border103;  //ì„¸ë¡œ ê²½ê³„ì„ 
         }
     }
 
-    .icon{  //¸ÅÀåorÆ÷Àå ¼±ÅÃÇÏ´Â ¾ÆÀÌÄÜ.
+    .icon{  //ë§¤ì¥orí¬ì¥ ì„ íƒí•˜ëŠ” ì•„ì´ì½˜.
         width:100px;
-        height:auto;    //width°ª¿¡ ¸ÂÃç¼­ ºñÀ² Á¶Á¤.
-        color: $booking-color-bg118;  //red°ª ÁÖ¸é Å×µÎ¸®°¡ ºÓ°Ô º¯ÇÔ. ÀÌ¹ÌÁö¸¦ ÄÚµå·Î ¼öÁ¤ °¡´É. ÄÚµå ÀÚÃ¼ÀÇ SVGÀÇ ÀåÁ¡.
+        height:auto;    //widthê°’ì— ë§ì¶°ì„œ ë¹„ìœ¨ ì¡°ì •.
+        color: $booking-color-bg118;  //redê°’ ì£¼ë©´ í…Œë‘ë¦¬ê°€ ë¶‰ê²Œ ë³€í•¨. ì´ë¯¸ì§€ë¥¼ ì½”ë“œë¡œ ìˆ˜ì • ê°€ëŠ¥. ì½”ë“œ ìì²´ì˜ SVGì˜ ì¥ì .
     }
 
     .desc {
         margin-top:8px;
         font-size:15px;
-        line-height:1.5;    //´ÜÀ§°¡ ÀûÇôÁ® ÀÖÁö ¾ÊÀº line-height´Â ÆùÆ®´ÜÀ§ÀÇ n¹è
+        line-height:1.5;    //ë‹¨ìœ„ê°€ ì í˜€ì ¸ ìˆì§€ ì•Šì€ line-heightëŠ” í°íŠ¸ë‹¨ìœ„ì˜ në°°
         font-weight: 600;
         color:$booking-color-text103;
     }
 
     .btn-selection {
-        display:inline-block;   //ÀÎ¶óÀÎ ¿ä¼Ò¿©¼­ ¸¶Áø°ªÀÌ ¾È¸ÔÈû. ÀÎ¶óÀÎ ºí·°À¸·Î display°ª ¼öÁ¤
+        display:inline-block;   //ì¸ë¼ì¸ ìš”ì†Œì—¬ì„œ ë§ˆì§„ê°’ì´ ì•ˆë¨¹í˜. ì¸ë¼ì¸ ë¸”ëŸ­ìœ¼ë¡œ displayê°’ ìˆ˜ì •
         margin-top: 10px;
         padding: 6px 18px;
         font-size: 16px;

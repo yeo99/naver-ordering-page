@@ -1,0 +1,77 @@
+.header-area {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: #03c75a;
+    color:#fff;
+    z-index:5000;
+
+    .place-header {
+        display:flex;
+        justify-content: space-between; //flex일때, 중앙정렬에 맞추고 양쪽으로 요소를 쭉 밀어줌
+        align-items: center;    //align을 center로 지정. 개발자 도구에서 보면 축을 보여줌
+        height:$place-header-height;
+
+        .title{
+            display: flex;
+            align-items: center;
+            font-size:20px;
+            font-weight: 600;
+        }
+
+        .link-back {
+            display: flex;
+        }
+
+        .my-orders {    //주문내역 버튼 패딩
+            padding-right:$m-padding;
+            font-size:15px;
+            font-weight: 700;
+        }
+    }
+    .place-tab {
+        display: flex;
+        height:$place-tab-height;
+        background-color: #03b753;
+    }
+
+    .tab-inner {
+        display:flex;
+        justify-content: space-between;
+        // flex이며, 2개 이상일 경우, 맨앞,맨뒤 요소는 양쪽으로 밀어놓고 나머지 요소들을 균등한 간격을 주고 배치
+        // around와의 차이는 첫, 마지막 요소의 여백 여부. 비트윈은 여백이 없다.
+        // mdn에서 justify-content 찾아보기
+        align-items: center;
+        padding: 0 8px;
+        width:100%; // 메뉴 간격 주기
+
+        .tab {
+            flex: 1;    //flex값에 1 부여시 같은 값의 폭을 가지게 됨
+            text-align: center; // 메뉴탭 글자가 왼쪽에 박혀있어서 사용
+            opacity: 0.7;   // 원본 예제를 보면 선택되지 않은 메뉴는 살짝 딤하다
+            padding:0 12px;
+            // 이미 center로 잡아줬지만 최소 여백을 잡아준다. 메뉴가 늘어났을때 각 요소가 너무 작아지면 안되서.
+            &.is-active {   //액티브인 경우에만 적용되는 css
+                font-weight: 700;
+                opacity: 1;
+                .txt::after {
+                    content:''; // 가상요소 사용할땐 무조건 content넣어줘야함.
+                    position: absolute;
+                    bottom:0;
+                    left:0;
+                    right:0;
+                    height:2px;
+                    background-color: #fff;
+                }
+            }
+
+            .txt {
+                position: relative;
+                display: inline-block;
+                padding:0 4px;
+                line-height: $place-tab-height;
+            }
+        }
+    }
+}
