@@ -1,0 +1,8 @@
+// 믹스인 사용. 말줄임표를 만들 때 사용
+@mixin ellipse {
+    // 텍스트면 말줄임표로
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // 영역 넘어가면 히든
+    overflow: hidden;
+}

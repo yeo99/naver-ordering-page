@@ -42,13 +42,13 @@
         <div class="order-info-area">
             <!-- 공통 inner. 헤더가 fixed여서 헤더 아래에 깔려있음 -->
             <div class="common-inner">
-                <div class="info-main title">
-                    <div class="title">
+                <div class="info-main">
+                    <div class="info-main-title title">
                         <!-- 인라인SVG의 장점 : 초기 페이지 로드시에 이미지가 같이 그려짐 -->
                         <svg viewBox="0 0 18 18" class="icon-logo">
                             <path fill-rule="evenodd" fill="currentColor" d="M18 0v18H0V0h18zM7.255 4.582H4.473v9.054h2.915V8.79l3.357 4.846h2.782V4.582h-2.915v4.846L7.255 4.582z"></path>
                         </svg>
-                        주문
+                        <span>주문</span>
                     </div>
                 </div>
                 <!-- 주문 분류 -->
@@ -84,6 +84,78 @@
                         <path fill="currentColor" d="M6.5 0a6.5 6.5 0 110 13 6.5 6.5 0 010-13zm0 1a5.5 5.5 0 100 11 5.5 5.5 0 000-11zm.492 1.137v4.157l2.792 2.674-.692.722-3.1-2.97V2.137h1z"></path>
                     </svg>
                     지금은 주문을 받을 수 없습니다.
+                </div>
+                <!-- 최근 주문 내역 -->
+                <div class="recent-order-area">
+                    <div class="recent-title">
+                        <img src="../assets/images/ico-clock.svg" alt="" class="ico-clock">최근<br>주문
+                    </div>
+                    <div class="recent-menu-area scroll-x">
+                        <!-- 리스트 클래스명 짓는데 흔한 패턴 -->
+                        <ul class="recent-menu-list">
+                            <li class="recent-menu-item is-ordered">
+                                <!-- 부모에 rel, 자식에 abs -->
+                                <div class="menu-img-area">
+                                    <!-- img src속성 링크=> 더미 이미지 사용에 유용 -->
+                                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴 사진">
+                                    <span class="badge-cart">
+                                        <img src="../assets/images/ico-cart.svg" alt="" class="ico-cart">
+                                    </span>
+                                </div>
+                                <p class="menu-name">칠리베이컨 웜볼</p>
+                                <p class="menu-price">6,100</p>
+                            </li>
+                            <li class="recent-menu-item">
+                                <div class="menu-img-area">
+                                    <span class="badge-popular">인기</span>
+                                    <!-- img src속성 링크=> 더미 이미지 사용에 유용 -->
+                                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴 사진">
+                                    <span class="badge-cart">
+                                        <img src="../assets/images/ico-cart.svg" alt="" class="ico-cart">
+                                    </span>
+                                </div>
+                                <p class="menu-name">칠리베이컨 웜볼</p>
+                                <p class="menu-price">6,100</p>
+                            </li>
+                            <li class="recent-menu-item">
+                                <div class="menu-img-area">
+                                    <span class="badge-popular">인기</span>
+                                    <!-- img src속성 링크=> 더미 이미지 사용에 유용 -->
+                                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴 사진">
+                                    <span class="badge-cart">
+                                        <img src="../assets/images/ico-cart.svg" alt="" class="ico-cart">
+                                    </span>
+                                </div>
+                                <p class="menu-name">칠리베이컨 웜볼</p>
+                                <p class="menu-price">6,100</p>
+                            </li>
+                            <li class="recent-menu-item">
+                                <!-- img src속성 링크=> 더미 이미지 사용에 유용 -->
+                                <div class="menu-img-area">
+                                    <span class="badge-popular">인기</span>
+                                    <!-- img src속성 링크=> 더미 이미지 사용에 유용 -->
+                                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴 사진">
+                                    <span class="badge-cart">
+                                        <img src="../assets/images/ico-cart.svg" alt="" class="ico-cart">
+                                    </span>
+                                </div>
+                                <p class="menu-name">칠리베이컨 웜볼</p>
+                                <p class="menu-price">6,100</p>
+                            </li>
+                            <li class="recent-menu-item">
+                                <div class="menu-img-area">
+                                    <span class="badge-popular">인기</span>
+                                    <!-- img src속성 링크=> 더미 이미지 사용에 유용 -->
+                                    <img class="menu-img" src="https://via.placeholder.com/80" alt="메뉴 사진">
+                                    <span class="badge-cart">
+                                        <img src="../assets/images/ico-cart.svg" alt="" class="ico-cart">
+                                    </span>
+                                </div>
+                                <p class="menu-name">칠리베이컨 웜볼</p>
+                                <p class="menu-price">6,100</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

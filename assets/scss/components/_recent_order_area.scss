@@ -1,0 +1,123 @@
+// 컴포넌트를 왜이리 쪼개서했냐?
+// => 한 파일의 CSS가 너무 길 경우 관리가 어려움.
+// 그리고 어짜피 컴포넌트형식의 개발을 하게되니까..
+
+.recent-order-area {
+    // recent-title과 recent-menu-area가 한 라인에
+    display: flex;
+    margin-top: 16px;
+    padding: 18px 0;
+    border-radius: 2px;
+    background-color: #fff;
+
+    .recent-title {
+        display: flex;
+        // flex요소를 column으로 쓰겠다 => 가로로 붙는게 아니라 세로로 떨어짐
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // 요소 크기가 작아지지 않도록
+        flex-shrink: 0;
+        padding: 8px;
+        border-right: 1px solid $booking-color-bg102;
+        line-height: 1.42;
+        font-size: 12px;
+        font-weight: 700;
+        color: $booking-color-text6;
+        .ico-clock {
+            margin-bottom: 4px;
+            width: 14px;
+        }
+    }
+
+    // ..base/_preset.scss에 구현해놓은 scroll-x덕분에 편하게 슬라이더 사용
+    // base나 abstract는 결국 계속 쓰게 될 것
+    .recent-menu-list {
+        display: flex;
+    }
+
+    .recent-menu-item {
+        box-sizing: content-box;
+        position: relative;
+        padding-right: 16px;
+        width: 80px;
+        text-align: center;
+        // 최근주문 | A, B, C.. | 광고품목1, 광고품목2, ,,
+        // 저 희끗한 bar를 가상요소로 구현
+        &.is-ordered {
+            padding-left: 16px;
+            border-right: 1px solid $booking-color-bg102;
+            & + .recent-menu-item {
+                // border: solid 1px red;
+                padding-left: 16px;
+            }
+        }
+        // 마지막 li요소가 부모div에 너무 딱붙어있음(오른쪽border가). 떼어주자
+        &:last-child {
+            padding-right: $m-padding;
+        }
+    }
+    // 장바구니 뱃지, 인기 뱃지 구현
+    .menu-img-area {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border: 1px solid $booking-color-border149;
+        border-radius: 100%;
+        background-color: rgba(0,0,0,0.01);
+    }
+
+    .badge-popular {
+        position: absolute;
+        top:0;
+        left:0;
+        padding: 0 5px;
+        border-radius: 10px;
+        // line-height는 두 줄이 되지 않는다는 가정 하에 객체요소지정
+        line-height: 16px;
+        font-size: 11px;
+        font-weight: 700;
+        background-color: #ff61a7;
+        color:#fff;
+    }
+
+    .menu-img {
+        // 이미지가 꽉 끼도록
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+    }
+
+    .badge-cart {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        // border-radius100%줘도 30x34.. display:flex주면 정방원이 된다.
+        display: flex;
+        padding: 6px;
+        border: 1px solid $booking-color-border150;
+        // 주의) border-radius: 100%가 항상 정방원을 만드는건 아니다.
+        // 지금은 리소스 가로세로비가 1:1이여서 가능한 것
+        border-radius: 100%;
+        background-color: $booking-color-bg18;
+    }
+
+    .ico-cart {
+        width: 16px;
+        height: 16px;
+    }
+
+    .menu-name {
+        margin-top: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        @include ellipse
+    }
+
+    .menu-price {
+        font-size: 13px;
+        font-weight: 700;
+        color: $point-color;
+        @include ellipse
+    }
+}

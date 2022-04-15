@@ -1,19 +1,20 @@
-// abstracts, base, components, pages µî ¿©·¯ ½ºÅ¸ÀÏ ½ÃÆ®µéÀ» ÀÛ¼ºÇØ³õ°í
-// ÃÖÁ¾ÀûÀ¸·Î´Â styles.scss¿¡¼­ importÇÏ¿© ../css/styles.css·Î ÄÄÆÄÀÏÇÑ´Ù.
-// Æ¯Á¤ ÆÄÀÏ¿¡ importµÇ¾î¾ß ÇÏ´Â°æ¿ì ¾Õ¿¡ _¸¦ Àû¾îÁØ´Ù.
-// ±×·¡¼­ @importÇÒ¶§ ÆÄÀÏ ¸í¿¡ _¸¦ ÀûÁö ¾Ê¾Æµµ µÈ´Ù.
+// abstracts, base, components, pages ë“± ì—¬ëŸ¬ ìŠ¤íƒ€ì¼ ì‹œíŠ¸ë“¤ì„ ì‘ì„±í•´ë†“ê³ 
+// ìµœì¢…ì ìœ¼ë¡œëŠ” styles.scssì—ì„œ importí•˜ì—¬ ../css/styles.cssë¡œ ì»´íŒŒì¼í•œë‹¤.
+// íŠ¹ì • íŒŒì¼ì— importë˜ì–´ì•¼ í•˜ëŠ”ê²½ìš° ì•ì— _ë¥¼ ì ì–´ì¤€ë‹¤.
+// ê·¸ë˜ì„œ @importí• ë•Œ íŒŒì¼ ëª…ì— _ë¥¼ ì ì§€ ì•Šì•„ë„ ëœë‹¤.
 @import "./abstracts/variables_color";
 @import "./abstracts/variables";
-// import´Â ÀÛ¼ºÇÑ ¼ø¼­´ë·Î µ¿ÀÛÇÏ´Âµ¥, reset, presetÀº variables*¿¡¼­ ¼±¾ğµÈ
-// »ö»óÀ» »ç¿ëÇÑ´Ù. ÀÌ·¯ÇÑ ÀÌÀ¯·Î variableÀÌ ´õ ³ªÁß¿¡ importµÇ¸é ¿À·ù°¡ ¹ß»ıÇÑ´Ù.
+@import "./abstracts/mixin_common";
+// importëŠ” ì‘ì„±í•œ ìˆœì„œëŒ€ë¡œ ë™ì‘í•˜ëŠ”ë°, reset, presetì€ variables*ì—ì„œ ì„ ì–¸ëœ
+// ìƒ‰ìƒì„ ì‚¬ìš©í•œë‹¤. ì´ëŸ¬í•œ ì´ìœ ë¡œ variableì´ ë” ë‚˜ì¤‘ì— importë˜ë©´ ì˜¤ë¥˜ê°€ ë°œìƒí•œë‹¤.
 
 @import "./base/reset";
 @import "./base/preset";
 @import "./components/header_area";
-@import "./components/order_type";   //»õ ½ºÅ¸ÀÏÀ» ¸¸µé¾ú´Ù¸é styles.scss¿¡¼­ import
-
-// @import "./components/header_area";
+@import "./components/order_type";   //ìƒˆ ìŠ¤íƒ€ì¼ì„ ë§Œë“¤ì—ˆë‹¤ë©´ styles.scssì—ì„œ import
 @import "./components/order_info_area";
+@import "./components/recent_order_area";
+// @import "./components/header_area";
 // @import "./components/order_type";
 
 @import "./pages/order_page";
