@@ -1,6 +1,6 @@
-//ÀÚÁÖ »ç¿ëµÇ´Â ±â´ÉµéÀ» ¸ð¾Æ³õ´Â preset.scss
+//ìžì£¼ ì‚¬ìš©ë˜ëŠ” ê¸°ëŠ¥ë“¤ì„ ëª¨ì•„ë†“ëŠ” preset.scss
 
-.screen-out {   // È­¸é¿¡´Â º¸¿©ÁöÁö ¾ÊÁö¸¸ ½ºÅ©¸° ¸®´õ°¡ ÀÐ¾îÁÖ´Â°Í. º¸ÀÌÁö´Â ¾Ê°Ô
+.screen-out {   // í™”ë©´ì—ëŠ” ë³´ì—¬ì§€ì§€ ì•Šì§€ë§Œ ìŠ¤í¬ë¦° ë¦¬ë”ê°€ ì½ì–´ì£¼ëŠ”ê²ƒ. ë³´ì´ì§€ëŠ” ì•Šê²Œ
     position: absolute;
     width: 0;
     height: 0;
@@ -9,20 +9,20 @@
     text-indent: -9999px;
 }
 
-.scroll-x { // ÀÚÁÖ »ç¿ëµÇ´Â ±â´ÉÀº ¾Æ¿¹ Å¬·¡½º¸íÀ¸·Î. °¡·Î ½ºÅ©·Ñ »ý¼ºÇÏ´Â css
+.scroll-x { // ìžì£¼ ì‚¬ìš©ë˜ëŠ” ê¸°ëŠ¥ì€ ì•„ì˜ˆ í´ëž˜ìŠ¤ëª…ìœ¼ë¡œ. ê°€ë¡œ ìŠ¤í¬ë¡¤ ìƒì„±í•˜ëŠ” css
     overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap;    // ¶ç¾î¾²±â ¾ÈÇÔ.
-    -webkit-overflow-scrolling: touch;  // ¸ð¹ÙÀÏ¿¡¼­ ÅÍÄ¡·Î ½ºÅ©·Ñ¸µÇÒ¶§, °¡¼Óµµ È¿°ú¶ó´ø°¡..?
-    -ms-overflow-style: none;   // IE¿¡¼­ ½ºÅ©·Ñ¹Ù Á¦°Å
-    scrollbar-width: none;  // FF¿¡¼­ ½ºÅ©·Ñ¹Ù Á¦°Å
-    &::-webkit-scrollbar {  // Å©·Ò¿¡¼­ ½ºÅ©·Ñ¹Ù Á¦°Å
+    white-space: nowrap;    // ë„ì–´ì“°ê¸° ì•ˆí•¨.
+    -webkit-overflow-scrolling: touch;  // ëª¨ë°”ì¼ì—ì„œ í„°ì¹˜ë¡œ ìŠ¤í¬ë¡¤ë§í• ë•Œ, ê°€ì†ë„ íš¨ê³¼ë¼ë˜ê°€..?
+    -ms-overflow-style: none;   // IEì—ì„œ ìŠ¤í¬ë¡¤ë°” ì œê±°
+    scrollbar-width: none;  // FFì—ì„œ ìŠ¤í¬ë¡¤ë°” ì œê±°
+    &::-webkit-scrollbar {  // í¬ë¡¬ì—ì„œ ìŠ¤í¬ë¡¤ë°” ì œê±°
         display:none;
     }
 }
 
-// ¸¶Áø, ÆÐµù ÇÏ³ª ÁÖÀÚ°í °è¼Ó Å¬·¡½º¸¦ ¸¸µé°í ³Ö¾îÁÙ ¼ö´Â ¾øÀ¸´Ï
-// ¹Ì¸® Å¬·¡½º¸íÀ¸·Î ¸¸µé¾î ³õÀ½. º»ÀÎÀÇ ÆÐÅÏÀ» Àß ÆÄ¾ÇÇØº¸ÀÚ.
+// ë§ˆì§„, íŒ¨ë”© í•˜ë‚˜ ì£¼ìžê³  ê³„ì† í´ëž˜ìŠ¤ë¥¼ ë§Œë“¤ê³  ë„£ì–´ì¤„ ìˆ˜ëŠ” ì—†ìœ¼ë‹ˆ
+// ë¯¸ë¦¬ í´ëž˜ìŠ¤ëª…ìœ¼ë¡œ ë§Œë“¤ì–´ ë†“ìŒ. ë³¸ì¸ì˜ íŒ¨í„´ì„ ìž˜ íŒŒì•…í•´ë³´ìž.
 
 .mgt0 {
     margin-top:0px !important;

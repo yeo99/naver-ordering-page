@@ -1,8 +1,10 @@
-// °øÅëÀ¸·Î »ç¿ëµÉ °ªµéÀ» ¸ğÀ¸´Âµ¥ »ç¿ëµÊ
+// ê³µí†µìœ¼ë¡œ ì‚¬ìš©ë  ê°’ë“¤ì„ ëª¨ìœ¼ëŠ”ë° ì‚¬ìš©ë¨
 // font
 $font-default: -apple-system, BlinkMacSystemFont, helvetica, Apple SD Gothic Neo, sans-serif;
 
 // size
-$m-padding: 18px;   //¸ğ¹ÙÀÏÀÇ ÆĞµù°ªÀº 18·Î.
+$m-padding: 18px;   //ëª¨ë°”ì¼ì˜ íŒ¨ë”©ê°’ì€ 18ë¡œ.
 $place-header-height: 48px;
 $place-tab-height: 46px;
+
+$header-height: $place-header-height + $place-tab-height;

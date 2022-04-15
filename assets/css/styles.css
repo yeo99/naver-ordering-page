@@ -656,8 +656,18 @@ textarea::-webkit-outer-spin-button {
   overflow: hidden;
 }
 
+.menu-category-area {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 94px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
 .container {
   padding-top: 94px;
+  background-color: #f4f7f9;
+  height: 2000px;
 }
 
 .common-inner {

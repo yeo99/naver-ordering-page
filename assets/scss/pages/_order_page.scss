@@ -2,6 +2,11 @@
 .container {
     // 최상단(x.0)에서 헤더와 네비탭만큼 padding으로 밀어줌
     padding-top: $place-header-height + $place-tab-height;
+    // 원본 페이지는 회색 border로 영역을 분할했지만
+    // 그냥 배경으로 회색을 깔고 각div에 마진을 주는게 더 편할거같다.
+    background-color: $booking-color-border151;
+
+    height:2000px;
 }
 
 .common-inner {
