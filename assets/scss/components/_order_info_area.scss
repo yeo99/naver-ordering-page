@@ -1,0 +1,106 @@
+// 단축 속성
+// margin, padding의 경우
+// x => 상우하좌x
+// x y => 상하x 좌우y
+// x y z => 상x 우, 좌y 하z
+.order-info-area {
+    padding: 10px $m-padding 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    background-color: $booking-color-bg155;
+
+    .info-main-title {
+        line-height: 39px;
+    }
+
+    .title{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        color: $booking-color-text6;
+        .icon-logo {
+            margin-right: 6px;
+            width: 24px;
+            height:24px;
+        }
+    }
+}
+
+.tab-switch-box {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    .tab-switch {
+        flex: 1;
+        background-color: $booking-color-bg158;
+        // 높이값으로 중앙정렬 잡아줌
+        line-height: 40px;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+        color: #666;
+        // 조금 어벙한 느낌때문에.. 자간조정
+        letter-spacing: -0.3px;
+        text-align: center;
+
+        // tab-switch가 활성화된 탭이라면
+        &.is-active {
+            position: relative;
+            flex-grow: 1.2;
+            border: 1px solid $booking-color-border145;
+            background-color: $booking-color-bg157;
+            font-size: 15px;
+            color: $booking-color-text126;
+            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.05);
+            &::after {
+                // after는 무조건 content 넣어줘야함
+                content: '';
+                position: absolute;
+                bottom: -9px;
+                left:50%;
+                width:10px;
+                height:10px;
+                // border에 색상값을 안넣어주면 font값을 상속받음
+                border: 1px solid;
+                border-width:0 1px 1px 0;
+                // after는 부모요소 중앙에 위치해서 active됐음을 좀 더 시각적으로 보여주려하지만
+                // 요소 자체의 가로폭으로 인해 중앙에 위치하지는 않는다. 요소의 가로폭만큼 원하는 방향으로 땡겨줘야함
+                // translateX => X축으로 요소 너비의 반만큼만 왼쪽(-)으로
+                background-color: $booking-color-bg157;
+                transform: rotate(45deg) translateX(-50%);
+                // 이미지를 쓰지 않고도 CSS로 자연스럽게 그려졌다
+            }
+            // active시에 체크표시에 주어질 스타일
+            .ico-check {
+                display: inline-block;
+                margin-left: 4px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    // active가 아닐시 체크표시에 주어질 스타일
+    .ico-check {
+        display: none;
+    }
+}
+
+// 주문방식 선택 영억 아래의 설명부분
+.info-main-notice {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 2px;
+    background-color: #fff;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    &.alert {
+        color: $point-color;
+        font-weight: 700;
+    }
+    .ico-clock {
+        margin-right: 6px;
+    }
+}
