@@ -5,4 +5,72 @@
     top: $header-height;
     margin-top: 10px;
     background-color: #fff;
+    
+    .common-inner {
+        position: relative;
+        border-bottom: 1px solid $booking-color-border144;
+        // 슬라이더가 애매하게 걸치면 이게 슬라이드가 되는지 사용자가 모를 수 있으므로 살짝 그라데이션을 넣어주자
+        &::before {
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $m-padding;
+            height: 100%;
+            // 그라데이션을 background-image의 linear-gradient속성으로 지정할 수 있다.
+            // 왼쪽이 찐하고 오른쪽으로 갈수록 연해지는데, 35%까지는 빨강을 유지하도록
+            background-image: linear-gradient(to right, #fff 35% ,rgba(255,255,255,0));
+            // 포인터가 뜰 필요가 없다. 그라데이션이 목적
+            pointer-events: none;
+            // 아래에 묻히지 않도록
+            z-index: 1;
+        }
+
+        &::after {
+            content:'';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: $m-padding;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba(255,255,255,0), #fff 65%);
+            pointer-events: none;
+            z-index: 1;
+        }
+    }
+
+    .category-list {
+        display: flex;
+        align-items: center;
+        height: 54px;
+    }
+
+    .category-item {
+        // 제일 왼쪽 첫번째 요소에 padding 부여
+        &:first-child {
+            padding-left: $m-padding;
+        }
+        // 제일 오른쪽 마지막 요소에 padding 부여
+        &:last-child {
+            padding-right: $m-padding;
+        }
+    }
+
+    .category-tab {
+        // 실질적인 tab의 모양을 가지고 있는 요소들만 포함
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 16px;
+        height: 30px;
+        // border-radius로 그 네모동글한 모양으로 만드려면 전체 height값의 1/2만큼 border-radius값을 준다.
+        border-radius: 15px;
+        color: $booking-color-text6;
+        &.is-active {
+            background-color: $booking-color-bg165;
+            font-weight: 700;
+            color:#fff;
+
+        }
+    }
 }

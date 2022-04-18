@@ -46,7 +46,9 @@
                     <div class="info-main-title title">
                         <!-- 인라인SVG의 장점 : 초기 페이지 로드시에 이미지가 같이 그려짐 -->
                         <svg viewBox="0 0 18 18" class="icon-logo">
-                            <path fill-rule="evenodd" fill="currentColor" d="M18 0v18H0V0h18zM7.255 4.582H4.473v9.054h2.915V8.79l3.357 4.846h2.782V4.582h-2.915v4.846L7.255 4.582z"></path>
+                            <path fill-rule="evenodd" fill="currentColor"
+                                d="M18 0v18H0V0h18zM7.255 4.582H4.473v9.054h2.915V8.79l3.357 4.846h2.782V4.582h-2.915v4.846L7.255 4.582z">
+                            </path>
                         </svg>
                         <span>주문</span>
                     </div>
@@ -57,20 +59,23 @@
                     <a href="#" class="tab-switch is-active" role="tab">
                         포장
                         <!-- aria-hidden? 접근성 관련. 스크린 리더가 읽을 필요가 없음을 명시. 꾸며주는 이미지에(="시각적으로 숨겨지지 않는 컨텐츠") alt값은 의미가 없으니까.. -->
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="ico-check" aria-hidden="true">
-                            <path d="M2 6L5.5 9.5L12.5 3" stroke="#5AC367" stroke-width="2"/>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="ico-check" aria-hidden="true">
+                            <path d="M2 6L5.5 9.5L12.5 3" stroke="#5AC367" stroke-width="2" />
                         </svg>
                     </a>
                     <a href="#" class="tab-switch" role="tab">
                         매장
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="ico-check" aria-hidden="true">
-                            <path d="M2 6L5.5 9.5L12.5 3" stroke="#5AC367" stroke-width="2"/>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="ico-check" aria-hidden="true">
+                            <path d="M2 6L5.5 9.5L12.5 3" stroke="#5AC367" stroke-width="2" />
                         </svg>
                     </a>
                     <a href="#" class="tab-switch" role="tab">
                         배달
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="ico-check" aria-hidden="true">
-                            <path d="M2 6L5.5 9.5L12.5 3" stroke="#5AC367" stroke-width="2"/>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="ico-check" aria-hidden="true">
+                            <path d="M2 6L5.5 9.5L12.5 3" stroke="#5AC367" stroke-width="2" />
                         </svg>
                     </a>
                 </div>
@@ -81,7 +86,9 @@
                 <!-- 당장 쓸 건 아니니까 hidden 처리 -->
                 <div class="info-main-notice alert hidden">
                     <svg viewBox="0 0 13 13" width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="currentColor" d="M6.5 0a6.5 6.5 0 110 13 6.5 6.5 0 010-13zm0 1a5.5 5.5 0 100 11 5.5 5.5 0 000-11zm.492 1.137v4.157l2.792 2.674-.692.722-3.1-2.97V2.137h1z"></path>
+                        <path fill="currentColor"
+                            d="M6.5 0a6.5 6.5 0 110 13 6.5 6.5 0 010-13zm0 1a5.5 5.5 0 100 11 5.5 5.5 0 000-11zm.492 1.137v4.157l2.792 2.674-.692.722-3.1-2.97V2.137h1z">
+                        </path>
                     </svg>
                     지금은 주문을 받을 수 없습니다.
                 </div>
@@ -163,16 +170,24 @@
 
         <!-- 메뉴 카테고리 영역(추천, 시즈널 메뉴, 시그니처,, etc) -->
         <div class="menu-category-area scroll-x">
-            <ul>
-                <li><a href="#">추천</a></li>
-                <li><a href="#">추천</a></li>
-                <li><a href="#">추천</a></li>
-                <li><a href="#">추천</a></li>
-                <li><a href="#">추천</a></li>
-                <li><a href="#">추천</a></li>
-            </ul>
+            <!-- 페이지가 넓어지더라도 padding 들어간듯이 -->
+            <div class="common-inner">
+                <ul class="category-list scroll-x">
+                    <li class="category-item"><a href="#" class="category-tab is-active">추천</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">시즈널 메뉴</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">시그니처 샐러드</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">웜볼</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">샌드</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">랩</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">나만의 샐러드</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">스프</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">음료</a></li>
+                    <li class="category-item"><a href="#" class="category-tab">드레싱 추가</a></li>
+                </ul>
+            </div>
         </div>
-        <!-- // 메뉴 카테고리 영역 -->
+    </div>
+    <!-- // 메뉴 카테고리 영역 -->
     </div>
 
     <div class="dimmed-layer hidden"></div>
