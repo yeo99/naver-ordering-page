@@ -1,0 +1,76 @@
+.menu-list-area {
+    background-color: #fff;
+    padding: 28px $m-padding 10px;
+    
+    // 인기 메뉴, 새로 나온 메뉴가 아닐 경우 위에 여백이 있다.
+    &:not(.new):not(.popular) {
+        margin-top: 10px;
+    }
+
+    &.new {
+        border-bottom: 1px solid $booking-color-border144;
+    }
+
+    // 토글 버튼이 닫힌 경우에는 is-closed class 추가
+    &.is-closed {
+        padding: 24px $m-padding;
+
+        // 토글 두개가 연달아 닫혀 있을 경우 margin-top:10px; 가 없어짐. 두개가 연달아서 올 때
+        & + .is-closed {
+            margin-top: 0;
+            border-top: 1px solid $booking-color-border144;
+        }
+
+        // 토글 버튼이 닫힌 경우에는 아이콘이 아래를 향해야 한다.
+        // 새 아이콘을 추가하지 말고, 아래로 뒤집어주자
+        .ico-arrow {
+            transform: rotate(180deg);
+        }
+
+        // 메뉴 리스트가 닫힌 상태인데 내용물이 보이면 안되니까
+        .menu-list {
+            display: none;
+        }
+    }
+
+    .menu-category {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title-area {
+        display: flex;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 19px;
+        font-weight: 700;
+        color: $booking-color-text100;
+        letter-spacing: -0.3px;
+    }
+
+    .btn-toggle {
+        display: flex;
+        margin: -16px;
+        padding: 16px;
+    }
+
+    .period {
+        font-size: 14px;
+        letter-spacing: -0.3px;
+        color: $booking-color-text4;
+        &::before {
+            // 단순 도형은 그리는게 더 빠르다
+            content: '';
+            display: inline-block;
+            margin-top: 0 10px;
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            background-color: #ededed;
+            vertical-align: middle;
+        }
+    }
+}
