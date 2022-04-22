@@ -1,8 +1,15 @@
-// 믹스인 사용. 말줄임표를 만들 때 사용
 @mixin ellipse {
-    // 텍스트면 말줄임표로
     text-overflow: ellipsis;
     white-space: nowrap;
-    // 영역 넘어가면 히든
     overflow: hidden;
+}
+
+@mixin multi-ellipsis($font-size, $line-height, $lines) {
+    font-size: $font-size;
+    line-height: $line-height;
+    max-height: $line-height * $lines;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical; /* autoprefixer: off */
 }
