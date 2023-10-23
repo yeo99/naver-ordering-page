@@ -29,7 +29,7 @@
 
 ### 개발 환경 설정
 ```
-npm init -y
+npm i
 sudo npm i -g sass
 ```
 
